@@ -6,6 +6,10 @@ const floor = document.querySelector('.menu');//adicionando a classe menu na con
 var score = document.querySelector('#numberScore');
 var count = 0;
 
+function Reload(){/*Função do botão para dar refesh na pagina*/
+     location.reload();
+}
+
 const jump = () => {
     
     mario.classList.add('jump');//adiconando a class jump na classe mario
@@ -19,6 +23,7 @@ const loop = setInterval(() => {
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
     const cloudsPosition = clouds.offsetLeft;
     const floorPosition = floor.offsetLeft;
+    var continuar;
 
          if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 80){
             
@@ -35,16 +40,20 @@ const loop = setInterval(() => {
             clouds.style.left = `${cloudsPosition}px` ;
 
             floor.style.animation = 'none';
-
+           
            
              
             clearInterval(loop);
+         
 
         }
         else{
             count++;
              
             score.innerHTML= count;
+
+            
+             
         }
 
 }, 10);

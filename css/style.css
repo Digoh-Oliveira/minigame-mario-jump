@@ -1,3 +1,4 @@
+@import url('https:\\fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 *{  margin: 0;
     padding: 0;
     box-sizing: border-box;}/* Um resete básico */
@@ -40,7 +41,7 @@
    animation: menu-animation 1.5s infinite linear}
 
 h2{
-    font-family:Verdana, Tahoma, sans-serif;
+    font-family:'Pess Start 2P', cursive;
     background: linear-gradient(#fff, #ff0000, #000);
     background-clip: text;
     -webkit-background-clip: text;

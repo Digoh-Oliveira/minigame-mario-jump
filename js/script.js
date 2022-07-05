@@ -7,8 +7,7 @@ var score = document.querySelector('#numberScore');
 var count = 0;
 
 function Reload(){/*Função do botão para dar refesh na pagina*/
-     location.reload();
-}
+     location.reload();}
 
 const jump = () => {
     
@@ -16,14 +15,13 @@ const jump = () => {
 
     setTimeout(() => {mario.classList.remove('jump');},500);//removendo a classe jump da classe mario
 }
-
+/*Loop da animação do Pipe, Mario, Clouds e do Floor que será Interrompida caso atinja os requisitos do IF */
 const loop = setInterval(() => {
     
     const pipePosition = pipe.offsetLeft;
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
     const cloudsPosition = clouds.offsetLeft;
     const floorPosition = floor.offsetLeft;
-    var continuar;
 
          if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 80){
             
@@ -41,22 +39,15 @@ const loop = setInterval(() => {
 
             floor.style.animation = 'none';
            
-           
-             
-            clearInterval(loop);
+           clearInterval(loop);
          
-
         }
-        else{
+        else{//caso não atinja os requisitos do If, o incremento da variavel count será adicionado a variavel score 
             count++;
              
-            score.innerHTML= count;
-
-            
-             
-        }
+            score.innerHTML= count;}
 
 }, 10);
 
-
+//evento que ativa o 'pulo' do Mario
 document.addEventListener("keydown", jump)

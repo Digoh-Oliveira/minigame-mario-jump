@@ -1,7 +1,6 @@
-*{
-    margin: 0;
+*{  margin: 0;
     padding: 0;
-    box-sizing: border-box;}
+    box-sizing: border-box;}/* Um resete básico */
 
 .game-board{
     width: 100%;
@@ -10,7 +9,7 @@
     border-bottom: 15px solid rgb(35, 160, 35);
     margin:0 auto;
     position: relative;
-    overflow: hidden;}/*Tudo que sair da div não ira aparecer*/
+    overflow: hidden;}/*Tudo que sair da div game-board não ira aparecer*/
 
 .mario{
     width: 150px;
@@ -23,8 +22,7 @@
 .clouds{
     position: absolute;
     width: 550px;
-    animation: clouds-animation 20s infinite linear;
-}
+    animation: clouds-animation 20s infinite linear;}
 
 .pipe{
     position: absolute;
@@ -46,17 +44,14 @@ h2{
     background: linear-gradient(#fff, #ff0000, #000);
     background-clip: text;
     -webkit-background-clip: text;
-
     -webkit-text-fill-color: transparent;
-    font-size: 60px;
-    margin-top: 60px;
-    margin-left: 25%;
-    position: absolute;
     text-shadow: -1px -1px 10px red;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #000;
-
-}
+    font-size: 60px;
+    margin-top: 60px;
+    margin-left: 25%;
+    position: absolute;}
 
 .score{
     position: relative;
@@ -65,13 +60,13 @@ h2{
     float: right;
     border: 2px solid black;
     border-radius: 100px;
-    background-color: chocolate;
-    }
+    background-color: chocolate;}
+
 .score p{
     text-align: center;
     font-family:Impact, 'Arial Narrow Bold', sans-serif;
-    font-size: 30px;padding: 50px;
-}
+    font-size: 30px;padding: 50px;}
+
 button{
     width: 90px;
     height: 90px;
@@ -80,10 +75,7 @@ button{
     font-family: Impact,'Arial Narrow Bold', sans-serif;
     background-color: green;
     margin-left: 10px;
-    margin-top: 50px;
-}
-
-
+    margin-top: 50px;}
 
     /*Animação do pipe*/
 @keyframes pipe-animation {
